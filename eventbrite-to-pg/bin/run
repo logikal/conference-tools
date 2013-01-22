@@ -1,0 +1,15 @@
+
+require 'csv'
+require 'pg'
+require 'sequel'
+
+ENV['EVENTBRITE_CSV'] || raise('missing: EVENTBRITE_CSV')
+ENV['DATABASE_URL'] || raise('missing: DATABASE_URL')
+
+File.readable?(ENV['EVENTBRITE_CSV']) || raise("Unable to read: #{ENV['EVENTBRITE_CSV']}")
+DB = Sequel.connect(ENV['DATABASE_URL']) || raise("Unable to connect: #{ENV['DATABASE_URL']}")
+
+CSV.foreach(ENV['EVENTBRITE_CSV'], :headers => true, :header_converters => :symbol) do |row|
+  DB[:attendees].insert(row.to_hash)
+end
+
