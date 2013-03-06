@@ -1,11 +1,11 @@
 # eventbrite-to-pg
 
-This utlity makes it easy to transfer your attendee report from EventBrite's CSV output into a Postgres database, making it possible to run SQL queries against your data.
+This utlity makes it easy to transfer your attendee report from Eventbrite's CSV output into a Postgres database, making it possible to run SQL queries against your data.
 
 ## Environment Variables
 
 * `DATABASE_URL` - The postgres url to use for setting up your database migrations and inserting your data.
-* `EVENTBRITE_CSV` - Path to the CVS file downloaded from the EventBrite website.
+* `EVENTBRITE_CSV` - Path to the CVS file downloaded from the Eventbrite website.
 
 ## Usage
 
