@@ -15,12 +15,12 @@ $ export DATABASE_URL=postgres://user:pass@hostname/database
 $ export EVENTBRITE_CSV=~/path/to/Attendees-12345678.csv
 $ bundle install
 $ bundle exec rake db:migrate:up
-$ ruby bin/run
+$ bundle exec ruby bin/run
 ```
 
 ## Starting Over
 
 ```
 $ bundle exec rake db:migrate:reset
-$ ruby bin/run
+$ bundle exec ruby bin/run
 ```
