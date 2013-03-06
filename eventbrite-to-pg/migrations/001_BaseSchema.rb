@@ -7,6 +7,7 @@ Sequel.migration do
       String      :first_name,           :size => 80,  :null => false
       String      :email,                :size => 255, :null => false
       String      :gravatar_email,       :size => 255, :null => false
+      String      :github,               :size => 80,  :null => false
       String      :twitter,              :size => 80,  :null => false
       String      :tshirt_size,          :size => 20,  :null => false
       String      :company,              :size => 255, :null => false
